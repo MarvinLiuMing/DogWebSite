@@ -1,26 +1,52 @@
 doctype html
 html
   head
+    script(src='/js/jquery-1.8.3.min.js')
+    script(src='/js/jquery.luara.0.0.1.min.js')
+    script(src='/js/layout.js')
     block scripts
     title= "天津市保护小动物协会"
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
       P 天津市保护小动物协会
       nav
-        ul
-          li 
-            a(href="error") 品牌介绍
-          li 
-            a(href="error") 项目分析
-          li 
-            a(href="error") 示范中心
-          li 
-            a(href="error") 投资方案
-          li 
-            a(href="error") 加盟服务
-          li 
-            a(href="error") 师资培训
-          li 
-            a(href="error") 联系我们
+          ul
+            li(class="dropdown")
+              a(href="#" class="dropbtn") 品牌介绍
+              div(class="dropdown-content")
+                a(href="error") 协会简介
+                a(href="error") 育宠堂品牌说明
+                a(href="error") 企业文化
+                a(href="error") 社会公益
+                a(href="error") 媒体聚焦
+                a(href="error") 团队精英
+            li 
+              a(href="error") 项目分析
+            li 
+              a(href="error") 示范中心
+            li 
+              a(href="error") 投资方案
+            li 
+              a(href="error") 加盟服务
+            li 
+              a(href="error") 师资培训
+            li 
+              a(href="error") 联系我们
+      div
+    div(class="example") 
+      ul
+        li
+          img(src="/images/1.jpg" alt="1")
+        li
+          img(src="/images/2.jpg" alt="2")
+        li
+          img(src="/images/3.jpg" alt="3")
+        li
+          img(src="/images/4.jpg" alt="4")
+      ol
+        li
+        li
+        li
+        li
     block content
     block foot

@@ -2,46 +2,73 @@ body {
   margin:0px;
   background-image:url(../images/bg.jpg);
   background-repeat:no-repeat;
-  width:800px;
 }
-
-a {
-  color: #00B7FF;
-}
-
 
 nav{
-    float: left;
-    width:920px;
-    height:40px;
-    background-image:url(../images/nav.jpg);
-    margin: 100px 0 0 0;
-    padding: 0 ;
+  width: 100%;
 }
-
-nav ul {
+ul{    
+    background-color:#333;   
+    overflow:hidden;   
+    width: 100%;
+    text-align:left; 
     float:left;
-    margin: 0px;
-    padding: 0 0 0 0;
-    width: 920px;
-    list-style: none;
-}
+    justify-content:space-between;/*决定子元素两端对齐，均匀间隔*/
+    align-items:center;/*决定子元素垂直居中*/
+    flex-wrap: wrap;/*子元素超出换行，默认是不换行的，当子元素的宽由flex决定时会失效*/
+}   
+li{   
+    float:left;  
+    flex:1; 
+    margin: 0 0 0 1000;
+    display: block;
+}   
+li a, .dropbtn{   
+    display:inline-block;   
+    color:white;   
+    text-align:center;   
+    padding:14px 16px;   
+    text-decoration:none;  
+}   
+  
+li a:hover, .dropdown:hover .dropbtn{   
+    background-color:#111;   
+}   
+  
+.dropdown{    
+    text-align:center;  
+}   
+  
+.dropdown-content{   
+    min-width:200px;   
+    background-color:#F9F9F9;   
+    position:absolute;   
+    display:none;   
+    box-shadow:0px 8px 15px 0px rgba(0,0,0,0.2);   
+}   
+  
+.dropdown-content a{   
+    color:black;   
+    padding:12px 16px;   
+    text-decoration:none;   
+    display:block;   
+}   
+  
+.dropdown-content a:hover{   
+    background-color:#F1F1F1;   
+}   
+  
+.dropdown:hover .dropdown-content{   
+    display: block;   
+}   
 
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    float: left;
-    padding: 11px 20px; 
-    font-size: 14px;
-    text-align: center;
-    text-decoration: none;
-    color: #000000;    
-    font-family: Tahoma;
-    outline: none;
-}
-
-nav li a:hover {
-    color: #2a5f00;
-}
+/*轮播*/
+.example{}
+.example ol{position:relative;width: 80px;height: 20px;top:-30px;left:60px;}
+.example ol li{float:left;width: 10px;height: 10px;margin: 5px;background: #fff;}
+.example ol li.seleted{background: #1AA4CA;}
+.luara-{position:relative;padding:0;overflow: hidden;}
+.luara- ul{padding: inherit;margin: 0;}
+.luara- ul li{display: none;padding: inherit;margin: inherit;list-style: none;}
+.luara- ul li:first-child{display:block;}
+.luara- ul li img{width: inherit;height: inherit;}
